@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.app-container {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* --- Palette Styling --- */
+#token-palette {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.token-category {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.token {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: grab;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.fraction {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.fraction hr {
+    margin: 0;
+    border: none;
+    border-top: 2px solid white;
+}
+
+/* --- Canvas Styling --- */
+#expression-canvas {
+    flex: 2;
+    min-height: 300px;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 2px dashed #ccc;
+}
+
+/* Visual cue for drop targets */
+.drop-target {
+    min-width: 40px;
+    min-height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #aaa;
+    margin: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+    color: #495057;
+    border-radius: 4px;
+}
+
+/* Highlight effect when dragging over a valid target */
+.drag-over {
+    border-color: #28a745 !important;
+    background-color: #d4edda !important;
+}
+
+/* Styles for the tokens once they are on the canvas */
+#expression-canvas .token {
+    cursor: default;
+    background-color: #6c757d; /* Different color on canvas */
+}
+
+#output-area {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#expression-output {
+    font-size: 1.5em;
+    min-height: 30px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
