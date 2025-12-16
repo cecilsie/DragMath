@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-and-Drop Math Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div id="token-palette">
+            <h2>🔢 Token Palette</h2>
+            <div class="token-category">
+                <h3>Numbers & Variables</h3>
+                <div class="token" draggable="true" data-type="number" data-value="1">1</div>
+                <div class="token" draggable="true" data-type="number" data-value="x">x</div>
+                <div class="token" draggable="true" data-type="constant" data-value="pi">$\pi$</div>
+            </div>
+            
+            <div class="token-category">
+                <h3>Operators</h3>
+                <div class="token" draggable="true" data-type="operator" data-value="+">+</div>
+                <div class="token" draggable="true" data-type="operator" data-value="-">-</div>
+                <div class="token" draggable="true" data-type="operator" data-value="*">$\times$</div>
+                <div class="token" draggable="true" data-type="operator" data-value="^2">$^2$</div>
+            </div>
+
+            <div class="token-category">
+                <h3>Structural</h3>
+                <div class="token fraction-template" draggable="true" data-type="structure" data-value="fraction">
+                    <div class="fraction">
+                        <span class="numerator-placeholder drop-target">[]</span>
+                        <hr>
+                        <span class="denominator-placeholder drop-target">[]</span>
+                    </div>
+                </div>
+                <div class="token function-template" draggable="true" data-type="structure" data-value="sin">sin( <span class="arg-placeholder drop-target">[]</span> )</div>
+            </div>
+        </div>
+
+        <div id="expression-canvas">
+            <h2>📝 Expression Canvas</h2>
+            <div id="main-drop-zone" class="drop-target placeholder-box">
+                Drag a token here to start...
+            </div>
+        </div>
+        
+        <div id="output-area">
+            <h3>Rendered Expression (LaTeX)</h3>
+            <p id="expression-output"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
